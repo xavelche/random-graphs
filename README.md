@@ -57,39 +57,6 @@ visualize_galton_watson(lam=0.8, max_gen=10)
 
 ---
 
-## Mathematical Background
-
-### Erdős–Rényi Random Graphs (G(n,p))
-- **Definition**: A random graph with $ n $ vertices, where each edge appears independently with probability $ p $.
-- **Phase Transition**:
-  - **Critical threshold**: $ p \approx \frac{1}{n} $.
-    - For $ p \ll \frac{1}{n} $: Small disconnected components.
-    - For $ p \gg \frac{1}{n} $: Emergence of a giant connected component.
-- **Degree Distribution**: For large $ n $, degrees follow a Poisson distribution with mean $ np $.
-- **Connectivity**: Sharp threshold at $ p \approx \frac{\log n}{n} $. Above this, the graph is almost surely connected.
-
-#### Suggested Experiments
-- Fix $ n=200 $, vary $ p $ between $ 0.001 $ and $ 0.02 $ to observe the phase transition.
-- Compare empirical degree distributions with the Poisson($ np $) law.
-- Measure the size of the largest component for different values of $ p $.
-
----
-
-### Galton–Watson Branching Process
-- **Definition**: A stochastic process modeling population growth, where each individual produces offspring according to a Poisson($ \lambda $) distribution.
-- **Extinction Probability**:
-  - $ q = 1 $ if $ \lambda \leq 1 $.
-  - $ q < 1 $ if $ \lambda > 1 $.
-- **Critical Parameter**: $ \lambda = 1 $ separates subcritical from supercritical regimes.
-- **Generation Growth**: Expected population size after $ t $ generations is $ \lambda^t $.
-
-#### Suggested Experiments
-- Compare extinction frequencies for $ \lambda = 0.8, 1.0, 1.2 $.
-- Observe exponential growth in the supercritical case ($ \lambda > 1 $).
-- Estimate extinction probabilities empirically and compare with theory.
-
----
-
 ## Project Structure
 
 ```
